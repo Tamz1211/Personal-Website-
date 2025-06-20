@@ -1,0 +1,124 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Tamarai Selvi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Profile</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="family.html">Family</a></li>
+
+
+      </ul>
+    </nav>
+  </header>
+
+<main class="page-section">
+  <h2 class="section-title">My Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+               <h3>Barista – Afri Cafe, Kota Kemuning </h3>
+        <p>Worked part-time as a barista where I learned customer service, time management, and working efficiently in a fast-paced environment. It helped me develop interpersonal and multitasking skills.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+                <h3> Event Poster Designer – Latania Ballroom </h3>
+        <p>Designed posters and digital visuals for weddings, engagements, and event promotions. Focused on color theory, layout, and visual to align with client needs.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+               <h3> Short Film Production – Part-Time </h3>
+        <p>Conceptualized, shot, and edited 3-4 short films focused on entertainment and emotion with my friends. Involved scripting, framing, and teamwork in visual storytelling.</p>
+      </div>
+    </div>
+
+ <div class="timeline-item right">
+      <div class="timeline-content">
+                <h3>  Volunteer – Beach Clean-Up Campaign</h3>
+        <p>Joined a beach cleaning program to support sustainability and environmental awareness. Worked with a Rotract team to collect, sort, and safely dispose of waste.</p>
+      </div>
+    </div>
+
+  </div>
+
+ </main>
+<audio id="bg-music" loop>
+  <source src="audio/starboy.mp3" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+
+<div class="music-controls">
+  <button id="music-btn" onclick="toggleMusic()">▶ Play Music</button>
+  <span class="track-title">Now Playing:Starboy- The Weeknd</span>
+</div>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const btn = document.getElementById("music-btn");
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (!isPlaying) {
+      music.volume = 0;
+      music.play();
+      fadeIn(music);
+      btn.textContent = '⏸ Pause Music';
+    } else {
+      music.pause();
+      btn.textContent = '▶ Play Music';
+    }
+    isPlaying = !isPlaying;
+  }
+
+  function fadeIn(audio) {
+    let volume = 0;
+    const fadeInterval = setInterval(() => {
+      if (volume < 1) {
+        volume += 0.05;
+        audio.volume = volume;
+      } else {
+        clearInterval(fadeInterval);
+      }
+    }, 200);
+  }
+</script>
+
+
+<footer>
+  <div class="social-footer">
+    <a href="https://www.instagram.com/tamaraiselvi_" target="_blank">
+      <img src="images/instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@tamzz12" target="_blank">
+      <img src="images/tiktok.jpg" alt="TikTok">
+    </a>
+    <a href="https://wa.me/60182062247" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.youtube.com/@tamaraiselvi886" target="_blank">
+      <img src="images/youtube.jpg" alt="YouTube">
+    </a>
+  </div>
+  <p>&copy; 2025 Tamarai Selvi | All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+

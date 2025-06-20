@@ -1,0 +1,111 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata | Tamarai Selvi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Profile</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html" class="active">Biodata</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="family.html">Family</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+ <main class="page-section">
+  <h2 class="section-title">My Biodata</h2>
+  <div class="hero">
+    <div class="hero-text">
+      <table class="styled-table">
+        <tbody>
+          <tr><th>Name:</th><td>Tamarai Selvi a/p Ganesan</td></tr>
+          <tr><th>Age:</th><td>21 years old</td></tr>
+          <tr><th>Date of Birth:</th><td>12 November 2004</td></tr>
+          <tr><th>Gender:</th><td>Female</td></tr>
+          <tr><th>Hometown:</th><td>Shah Alam, Selangor</td></tr>
+          <tr><th>Program:</th><td>Bachelor of Interactive Media Technology (Hons)</td></tr>
+          <tr><th>University:</th><td>Universiti Malaysia Perlis (UniMAP)</td></tr>
+          <tr><th>Email:</th><td>tamarai2223@yahoo.com</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="hero-image">
+      <img src="images/me 3.jpg" alt="Profile Photo">
+    </div>
+  </div>
+</main>
+
+<audio id="bg-music" loop>
+  <source src="audio/starboy.mp3" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+
+<div class="music-controls">
+  <button id="music-btn" onclick="toggleMusic()">▶ Play Music</button>
+  <span class="track-title">Now Playing:Starboy- The Weeknd</span>
+</div>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const btn = document.getElementById("music-btn");
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (!isPlaying) {
+      music.volume = 0;
+      music.play();
+      fadeIn(music);
+      btn.textContent = '⏸ Pause Music';
+    } else {
+      music.pause();
+      btn.textContent = '▶ Play Music';
+    }
+    isPlaying = !isPlaying;
+  }
+
+  function fadeIn(audio) {
+    let volume = 0;
+    const fadeInterval = setInterval(() => {
+      if (volume < 1) {
+        volume += 0.05;
+        audio.volume = volume;
+      } else {
+        clearInterval(fadeInterval);
+      }
+    }, 200);
+  }
+</script>
+
+<footer>
+  <div class="social-footer">
+    <a href="https://www.instagram.com/tamaraiselvi_" target="_blank">
+      <img src="images/instagram.jpg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@tamzz12" target="_blank">
+      <img src="images/tiktok.jpg" alt="TikTok">
+    </a>
+    <a href="https://wa.me/60182062247" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.youtube.com/@tamaraiselvi886" target="_blank">
+      <img src="images/youtube.jpg" alt="YouTube">
+    </a>
+  </div>
+  <p>&copy; 2025 Tamarai Selvi | All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+
